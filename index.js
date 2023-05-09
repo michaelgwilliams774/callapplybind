@@ -16,7 +16,7 @@ const archer = {
 console.log('1', archer);
 wizard.heal.call(archer, 50, 30)   // !important - archer borrows a function from wizard using call()
 wizard.heal.apply(archer, [50,30]) // Difference from call - accepts an array of parameters
-const healArcher = wizard.heal.bind(archer, 50, 30) // bind() returns a function with certain context, parameters
+const healArcher = wizard.heal.bind(archer, 50, 30) // bind() returns a function with certain context, parameters, and 'this' keyword
 healArcher()
 console.log('2', archer);
 
